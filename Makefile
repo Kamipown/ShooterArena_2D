@@ -4,12 +4,12 @@ FLG =	-Wall -Wextra -Werror
 
 SRC =	src/main.cpp
 
-INC =	-I./include
+INC =	-I./inc
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLG) $(SRC) $(INC) -lSDL2 -o $(NAME)
+	g++ $(FLG) $(SRC) $(INC) -lSDL2 -o $(NAME)
 
 clean:
 	rm -f $(NAME)
