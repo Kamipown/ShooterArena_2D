@@ -1,4 +1,4 @@
-NAME =	TankShooter_2D
+NAME =	ShooterArena_2D
 
 FLG =	-Wall -Wextra -Werror
 
