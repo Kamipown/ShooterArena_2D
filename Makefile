@@ -2,7 +2,7 @@ NAME =	TankShooter_2D
 
 FLG =	-Wall -Wextra -Werror
 
-SRC =	src/main.cpp src/class_game.cpp
+SRC =	src/main.cpp src/class_game.cpp src/class_engine.cpp
 
 INC =	-I./inc
 
