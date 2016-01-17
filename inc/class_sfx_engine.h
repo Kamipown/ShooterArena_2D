@@ -6,7 +6,7 @@
 class class_sfx_engine : public class_engine{
     
 private:
-	const string SOUNDS_INI_FILE = "/ini/sounds.ini";
+	const std::string SOUNDS_INI_FILE = "/ini/sounds.ini";
 
 	boost::map<e_sfx_sounds, SDL2_sound> map_sounds;
 
