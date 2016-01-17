@@ -22,6 +22,7 @@ class_gfx_engine::~class_gfx_engine(void)
 
 void class_gfx_engine::frame(void)
 {
+    SDL_Delay(3000);
 	this->process_events();
 }
 
