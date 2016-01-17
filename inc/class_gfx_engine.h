@@ -1,8 +1,12 @@
+class class_gfx_engine;
+
 #pragma once
 
 #include "class_engine.h"
+#include <SDL2/SDL.h>
 
 class class_gfx_engine
+    : public class_engine
 {
 	private:
 		SDL_Window *window;

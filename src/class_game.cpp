@@ -1,4 +1,5 @@
 #include "class_game.h"
+#include <SDL2/SDL.h>
 
 class_game::class_game()
 {
@@ -9,7 +10,6 @@ class_game::class_game()
 		exit(EXIT_FAILURE);
 	}
 
-    boost::mutex::scoped_lock m(this->game_running);
     this->game_running = true;
     
     this->game_engine = new class_game_engine(this);
@@ -29,29 +29,17 @@ class_game::class_game()
 class_game::~class_game()
 {
 	SDL_Quit();
-    std::list<class_engine*>::iterator it;
-    for(it = this->l_modules.begin(); it != this->l_modules.end(); it++){
-        delete it;        
-    }
+    this->l_modules.clear();
 }
 
 void class_game::game_run(){
-    bool still_running = this->game_running;
-
-    boost::mutex::scoped_lock l(mutex_game_running);
-    l.unlock();
-
-    while(still_running){
+    while(game_running){
         game_engine->frame();
         gfx_engine->frame();
         sfx_engine->frame();
-        l.lock();
-            still_running = game_running;
-        l.unlock();
     }
 }
 
 void class_game::game_stop(){
-    boost::mutex::scoped_lock m(this->game_running);
     this->game_running = false;
 }
