@@ -1,4 +1,4 @@
-#include "../inc/class_engine.h"
+#include "class_engine.h"
 
 class_engine::class_engine(class_game* parent):
     parent(m_parent)

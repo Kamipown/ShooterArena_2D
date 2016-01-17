@@ -1,4 +1,4 @@
-#include "../inc/class_game.h"
+#include "class_game.h"
 
 class_game::class_game(){
    boost::mutex::scoped_lock m(this->game_running);
