@@ -14,23 +14,31 @@ class_sfx_engine::class_sfx_engine(class_game* m_parent) : class_engine(m_parent
 
 void class_sfx_engine::load_sounds(void)
 {
-	std::ifstream file(SOUNDS_INI_FILE);
-	 
-	if (file)
-	{
-		std::stringstream buffer;
-		
-		buffer << file.rdbuf();
+	ifstream inFile;
 
-		file.close();
+	inFile.open(SOUNDS_INI_FILE);
 
-		e_sfx_sounds sound;
-		std::string path;
-		map_sounds.add(sound, new SDL2_sound(path));
-		// operations on the buffer...
+	if (inFile.is_open){
+
+		std::string line;
+
+		while (getline(inFile, line, '\n'))
+		{			
+			stringstream dosString;
+			dosString << line;
+
+			e_sfx_sounds sound;
+			std::string path;
+
+			dosString >> sound >> path;
+			map_sounds.add(sound, new SDL2_sound(path));
+		}
+
+		inFile.close();
 	}
-	else{
-
+	else
+	{
+		printf("Reading file '%s' failed\n", SOUNDS_INI_FILE);
 	}
 	
 }
