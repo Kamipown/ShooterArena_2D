@@ -1,6 +1,6 @@
 #include "class_engine.h"
 
-class_engine::class_engine(class_game* parent):
+class_engine::class_engine(class_game* m_parent):
     parent(m_parent)
 {
     
