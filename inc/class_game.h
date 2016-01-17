@@ -1,8 +1,10 @@
 #pragma once
 
 #include <list>
-#include <boost/thread/mutex.hpp>
 #include "class_engine.h"
+#include "class_game_engine.h"
+#include "class_gfx_engine.h"
+#include "class_sfx_engine.h"
 
 class class_game
 {
@@ -11,7 +13,6 @@ class class_game
 
         std::list<class_engine*> l_modules;
 
-        boost::mutex mutex_game_running;
         bool game_running;
 
         class_game_engine* game_engine;

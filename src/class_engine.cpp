@@ -11,7 +11,7 @@ void class_engine::push_event(class_engine_event &e){
 }
 
 void class_engine::process_events(){
-    class_engine_event &e;
+    class_engine_event e;
     while(!q_events.empty()){
         e = this->q_events.front();
         this->process_event(e);

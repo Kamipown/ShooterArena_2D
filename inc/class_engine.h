@@ -1,10 +1,12 @@
 #pragma once
 
 #include <queue>
-#include "class_game.h"
-#include "class_game_engine.h"
-#include "class_gfx_engine.h"
-#include "class_sfx_engine.h"
+#include "class_engine_event.h"
+
+class class_game_engine;
+class class_gfx_engine;
+class class_sfx_engine;
+class class_game;
 
 class class_engine
 {
@@ -13,9 +15,9 @@ class class_engine
 
          class_game* parent;
 
-         std::queue<engine_event> q_events;
+         std::queue<class_engine_event> q_events;
 
-         virtual void process_event(engine_event &e) = 0;
+         virtual void process_event(class_engine_event &e) = 0;
 
          void send_to_game(class_engine_event& e);
          void send_to_gfx(class_engine_event& e);
@@ -30,9 +32,9 @@ class class_engine
         class_engine(class_game* m_parent);
         virtual ~class_engine();
 
-        void push_event(engine_event &e);
+        void push_event(class_engine_event &e);
 
-        void procces_events();
+        void process_events();
 
         virtual void frame() = 0;
 
