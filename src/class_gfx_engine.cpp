@@ -1,6 +1,6 @@
 #include "class_gfx_engine.h"
 
-class_gfx_engine::class_gfx_engine(class_engine *m_parent): parent(m_parent)
+class_gfx_engine::class_gfx_engine(class_engine *m_parent): class_engine(m_parent)
 {
 	if (SDL_InitSubSystem(SDL_INIT_VIDEO) != 0)
 	{
