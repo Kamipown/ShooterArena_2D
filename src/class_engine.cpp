@@ -2,8 +2,11 @@
 
 class_engine::class_engine(class_game* m_parent):
     parent(m_parent)
+{    
+}
+
+class_engine::~class_engine()
 {
-    
 }
 
 void class_engine::push_event(class_engine_event &e){

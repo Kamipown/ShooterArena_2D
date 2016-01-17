@@ -69,11 +69,11 @@ void class_sfx_engine::frame(void)
 	*/
 }
 
-/*
+
 void class_sfx_engine::process_event(class_engine_event &e)
 {
 	
-	switch (e.action)
+/*	switch (e.action)
 	{
 	case e_sfx_actions.play:
 		this->play_sound(e.sound);
@@ -85,11 +85,11 @@ void class_sfx_engine::process_event(class_engine_event &e)
 		this->pause_sound(e.sound);
 		break;
 	}
-	
+*/e=e;	
 }
 
 
-
+/*
 void class_sfx_engine::play_sound(e_sfx_sounds sound)
 {
 

@@ -1,5 +1,8 @@
 #include "class_game.h"
 #include <SDL2/SDL.h>
+#include "class_game_engine.h"
+#include "class_gfx_engine.h"
+#include "class_sfx_engine.h"
 
 class_game::class_game()
 {
