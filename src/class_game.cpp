@@ -26,7 +26,9 @@ class_game::class_game()
     this->sfx_engine->attach_gfx_engine(gfx_engine);
 }
 
-class_game::~class_game(){
+class_game::~class_game()
+{
+	SDL_Quit();
     std::list<class_engine*>::iterator it;
     for(it = this->l_modules.begin(); it != this->l_modules.end(); it++){
         delete it;        
