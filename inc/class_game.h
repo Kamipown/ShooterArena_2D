@@ -14,11 +14,16 @@ class class_game
         boost::mutex mutex_game_running;
         bool game_running;
 
+        class_game_engine* game_engine;
+        class_gfx_engine* gfx_engine;
+        class_sfx_engine* sfx_engine;
+    
     public:
 
         class_game();
         ~class_game();
 
         void game_stop();
+        void game_run();
 };
 
