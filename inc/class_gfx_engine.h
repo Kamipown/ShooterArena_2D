@@ -3,6 +3,7 @@ class class_gfx_engine;
 #pragma once
 
 #include "class_engine.h"
+#include <stdio.h>
 #include <SDL2/SDL.h>
 
 class class_gfx_engine

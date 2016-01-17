@@ -1,1 +1,2 @@
-﻿enum e_sfx_sounds { fire, explosion };
+﻿#pragma once
+enum e_sfx_sounds { fire, explosion };

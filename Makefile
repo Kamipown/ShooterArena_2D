@@ -8,7 +8,8 @@ SRC =	src/main.cpp \
 		src/class_engine_event.cpp \
 		src/class_gfx_engine.cpp \
 		src/class_sfx_engine.cpp \
-		src/class_game_engine.cpp
+		src/class_game_engine.cpp \
+		src/class_sfx_engine_event.cpp
 
 INC =	-I./inc
 

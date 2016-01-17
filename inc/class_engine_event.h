@@ -1,3 +1,6 @@
+#pragma once
+
+
 enum e_event_type { game, gfx, sound };
 
 class class_engine_event{
