@@ -1,6 +1,14 @@
 #include "class_game.h"
 
-class_game::class_game(){
+class_game::class_game()
+{
+	SDL_SetMainReady();
+	if (SDL_Init(0) != 0)
+	{
+		printf("SDL_Init failed: %s\n", SDL_GetError());
+		exit(EXIT_FAILURE);
+	}
+
     boost::mutex::scoped_lock m(this->game_running);
     this->game_running = true;
     
