@@ -1,0 +1,1 @@
+﻿enum e_sfx_actions { play, stop, pause };
