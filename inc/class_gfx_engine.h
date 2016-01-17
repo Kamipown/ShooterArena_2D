@@ -8,7 +8,6 @@ class class_gfx_engine
 		SDL_Window *window;
 
 	protected:
-		class_game *parent;
 		void process_event(class_engine_event &e);
 
 	public:
