@@ -4,7 +4,7 @@
 #include "class_game.h"
 #include "class_game_engine.h"
 #include "class_gfx_engine.h"
-#include "class_sound_engine.h"
+#include "class_sfx_engine.h"
 
 class class_engine{
     
@@ -21,7 +21,7 @@ class class_engine{
 
         void attach_game_engine(class_game_engine* e) { game_engine = e; };
         void attach_gfx_engine(class_gfx_engine* e) { gfx_engine = e; };
-        void attach_sound_engine(class_sound_engine* e) { sound_engine = e };
+        void attach_sound_engine(class_sfx_engine* e) { sfx_engine = e };
 
     protected:
 
@@ -33,11 +33,11 @@ class class_engine{
 
          void send_to_game(class_engine_event& e);
          void send_to_gfx(class_engine_event& e);
-         void send_to_sound(class_engine_event& e);
+         void send_to_sfx(class_engine_event& e);
 
          class_game_engine* game_engine;
          class_gfx_engine* gfx_engine;
-         class_sound_engine* sound_engine;
+         class_sfx_engine* sfx_engine;
 
 };
 
