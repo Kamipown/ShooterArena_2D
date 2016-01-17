@@ -2,7 +2,7 @@
 #include "e_sfx_actions.h"
 #include "e_sfx_actions.h"
 
-class class_sfx_engine_event : class_engine_event{
+class class_sfx_engine_event : public class_engine_event{
 
 private:
 	e_sfx_actions action;
