@@ -42,7 +42,7 @@ void class_sfx_engine::load_sounds()
 	{
 		std::cout << "Reading file" << SOUNDS_INI_FILE << "failed" << std::endl;
 	}
-	*/
+	
 }
 
 void class_sfx_engine::initialize_SDL(void)
