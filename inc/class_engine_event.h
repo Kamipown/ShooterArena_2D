@@ -2,9 +2,16 @@ enum e_event_type { game, gfx, sound };
 
 class class_engine_event{
 
-    public:
-        e_event_type type;
+private:
 
-        // TODO: add data structures
-        
+
+protected:
+
+
+public:
+	class_engine_event(e_event_type m_type);
+	e_event_type type;
+
+	// TODO: add data structures
+
 };
