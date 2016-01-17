@@ -11,6 +11,7 @@ class class_game{
         class_game();
         ~class_game();
 
+        void game_run();
         void game_stop();
 
     private:
@@ -19,5 +20,9 @@ class class_game{
 
         boost::mutex mutex_game_running;
         bool game_running;
+
+        class_game_engine* game_engine;
+        class_gfx_engine* gfx_engine;
+        class_sfx_engine* sfx_engine;
 };
 
