@@ -3,14 +3,14 @@
 #include "class_engine.h"
 #include "e_sfx_sounds.h"
 #include <string>
-
+#include <iostream>
 
 class class_sfx_engine : public class_engine{
     
 private:
-	const std::string SOUNDS_INI_FILE = "/ini/sounds.ini";
+	static const std::string SOUNDS_INI_FILE;
 
-	boost::map<e_sfx_sounds, Mix_Music> map_sounds;
+	//boost::map<e_sfx_sounds, Mix_Music> map_sounds;
 
 	void load_sounds(void);
 	void initialize_SDL(void);
