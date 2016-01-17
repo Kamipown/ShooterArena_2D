@@ -31,7 +31,7 @@ void class_sfx_engine::load_sounds(void)
 			std::string path;
 
 			dosString >> sound >> path;
-			map_sounds.add(sound, new SDL2_sound(path));
+			map_sounds.add(sound,Mix_Music(path));
 		}
 
 		inFile.close();

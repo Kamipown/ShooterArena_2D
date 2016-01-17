@@ -14,7 +14,7 @@ INC =	-I./inc
 all: $(NAME)
 
 $(NAME):
-	g++ $(FLG) $(SRC) $(INC) -lSDL2 -lSDL_mixer -o $(NAME)
+	g++ $(FLG) $(SRC) $(INC) -lSDL2 -lSDL2_mixer -o $(NAME)
 
 clean:
 	rm -f $(NAME)
