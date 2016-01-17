@@ -21,7 +21,7 @@ class class_engine{
 
         void attach_game_engine(class_game_engine* e) { game_engine = e; };
         void attach_gfx_engine(class_gfx_engine* e) { gfx_engine = e; };
-        void attach_sound_engine(class_sfx_engine* e) { sfx_engine = e };
+        void attach_sfx_engine(class_sfx_engine* e) { sfx_engine = e };
 
     protected:
 
