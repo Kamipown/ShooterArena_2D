@@ -15,6 +15,8 @@ class class_gfx_engine
 		int 		screen_width;
 		int 		screen_height;
 
+		void get_display_bounds(void);
+
 	protected:
 		void process_event(class_engine_event &e);
 

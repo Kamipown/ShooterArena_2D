@@ -25,13 +25,28 @@ static SDL_Window	*new_window(int x, int y)
 class_gfx_engine::class_gfx_engine(class_game *m_parent): class_engine(m_parent)
 {
 	init_sdl_video();
-	window = new_window(800, 600);
+	get_display_bounds();
+	this->window = new_window(this->screen_width, this->screen_height);
 }
 
 class_gfx_engine::~class_gfx_engine(void)
 {
 	SDL_DestroyWindow(window);
 	SDL_QuitSubSystem(SDL_INIT_VIDEO);
+}
+
+void class_gfx_engine::get_display_bounds(void)
+{
+	SDL_Rect rect;
+
+	if (SDL_GetDisplayBounds(0, &rect) != 0)
+	{
+		this->screen_width = 800;
+		this->screen_width = 600;
+		return ;
+	}
+	this->screen_width = rect.w;
+	this->screen_height = rect.h;
 }
 
 void class_gfx_engine::frame(void)
