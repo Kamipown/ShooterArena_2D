@@ -27,6 +27,7 @@ class_gfx_engine::class_gfx_engine(class_game *m_parent): class_engine(m_parent)
 	init_sdl_video();
 	get_display_bounds();
 	this->window = new_window(this->screen_width, this->screen_height);
+	set_window_fullscreen();
 }
 
 class_gfx_engine::~class_gfx_engine(void)
@@ -47,6 +48,27 @@ void class_gfx_engine::get_display_bounds(void)
 	}
 	this->screen_width = rect.w;
 	this->screen_height = rect.h;
+}
+
+void class_gfx_engine::set_window_fullscreen(void)
+{
+	SDL_SetWindowFullscreen(this->window, SDL_WINDOW_FULLSCREEN);
+	fullscreen = true;
+}
+
+void class_gfx_engine::set_window_desktop(void)
+{
+	SDL_SetWindowFullscreen(this->window, 0);
+	fullscreen = false;
+}
+
+void class_gfx_engine::switch_fullscreen_state(void)
+{
+	if (fullscreen)
+		SDL_SetWindowFullscreen(this->window, 0);
+	else
+		SDL_SetWindowFullscreen(this->window, SDL_WINDOW_FULLSCREEN);
+	fullscreen = !fullscreen;
 }
 
 void class_gfx_engine::frame(void)

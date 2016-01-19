@@ -14,8 +14,12 @@ class class_gfx_engine
 		SDL_Window	*window;
 		int 		screen_width;
 		int 		screen_height;
+		bool		fullscreen;
 
 		void get_display_bounds(void);
+		void set_window_fullscreen(void);
+		void set_window_desktop(void);
+		void switch_fullscreen_state(void);
 
 	protected:
 		void process_event(class_engine_event &e);
