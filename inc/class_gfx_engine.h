@@ -5,12 +5,15 @@ class class_gfx_engine;
 #include "class_engine.h"
 #include <stdio.h>
 #include <SDL2/SDL.h>
+#include "defs.h"
 
 class class_gfx_engine
     : public class_engine
 {
 	private:
-		SDL_Window *window;
+		SDL_Window	*window;
+		int 		screen_width;
+		int 		screen_height;
 
 	protected:
 		void process_event(class_engine_event &e);

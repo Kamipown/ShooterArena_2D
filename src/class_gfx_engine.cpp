@@ -1,17 +1,31 @@
 #include "class_gfx_engine.h"
 
-class_gfx_engine::class_gfx_engine(class_game *m_parent): class_engine(m_parent)
+static void			init_sdl_video(void)
 {
 	if (SDL_InitSubSystem(SDL_INIT_VIDEO) != 0)
 	{
 		printf("SDL_INIT_VIDEO failed: %s\n", SDL_GetError());
 		exit(EXIT_FAILURE);
 	}
-	if ((window = SDL_CreateWindow("title", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, 0)) == NULL)
+}
+
+static SDL_Window	*new_window(int x, int y)
+{
+	SDL_Window	*window;
+
+	window = SDL_CreateWindow(GAME_NAME, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, x, y, 0);
+	if (!window)
 	{
 		printf("SDL_CreateWindow failed: %s\n", SDL_GetError());
 		exit(EXIT_FAILURE);
 	}
+	return (window);
+}
+
+class_gfx_engine::class_gfx_engine(class_game *m_parent): class_engine(m_parent)
+{
+	init_sdl_video();
+	window = new_window(800, 600);
 }
 
 class_gfx_engine::~class_gfx_engine(void)
