@@ -22,7 +22,7 @@ class class_gfx_engine
 		void switch_fullscreen_state(void);
 
 	protected:
-		void process_event(class_engine_event &e);
+		void process_event(class_engine_event* e);
 
 	public:
 		class_gfx_engine(class_game *m_parent);

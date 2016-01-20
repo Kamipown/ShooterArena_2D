@@ -15,9 +15,9 @@ class class_engine
 
          class_game* parent;
 
-         std::queue<class_engine_event> q_events;
+         std::queue<class_engine_event*> q_events;
 
-         virtual void process_event(class_engine_event &e) = 0;
+         virtual void process_event(class_engine_event* e) = 0;
 
          void send_to_game(class_engine_event& e);
          void send_to_gfx(class_engine_event& e);
@@ -32,7 +32,7 @@ class class_engine
         class_engine(class_game* m_parent);
         virtual ~class_engine();
 
-        void push_event(class_engine_event &e);
+        void push_event(class_engine_event* e);
 
         void process_events();
 

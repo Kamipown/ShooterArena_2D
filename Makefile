@@ -7,6 +7,7 @@ SRC =	src/main.cpp \
 		src/class_engine.cpp \
 		src/class_engine_event.cpp \
 		src/game_engine/class_game_engine.cpp \
+		src/game_engine/class_game_engine_event.cpp \
 		src/gfx_engine/class_gfx_engine.cpp \
 		src/sfx_engine/class_sfx_engine.cpp \
 		src/sfx_engine/class_sfx_engine_event.cpp

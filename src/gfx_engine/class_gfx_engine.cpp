@@ -77,7 +77,7 @@ void class_gfx_engine::frame(void)
 	this->process_events();
 }
 
-void class_gfx_engine::process_event(class_engine_event &e)
+void class_gfx_engine::process_event(class_engine_event* e)
 {
     e=e;   
 }

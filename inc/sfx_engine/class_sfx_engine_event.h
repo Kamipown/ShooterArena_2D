@@ -18,5 +18,5 @@ public:
 	e_sfx_actions get_action(void);
 	e_sfx_sounds get_sound(void);
 
-	class_sfx_engine_event(e_event_type type, e_sfx_actions m_action, e_sfx_sounds m_sound);
+	class_sfx_engine_event(e_sfx_actions m_action, e_sfx_sounds m_sound);
 };

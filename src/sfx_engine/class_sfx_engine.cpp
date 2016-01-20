@@ -72,12 +72,11 @@ void class_sfx_engine::frame(void)
 }
 
 
-void class_sfx_engine::process_event(class_engine_event &e)
+void class_sfx_engine::process_event(class_engine_event* e)
 {
-	class_sfx_engine_event &re = static_cast<class_sfx_engine_event&>(e);
-	re = re;
-	e_sfx_sounds sound = re.get_sound();
-	e_sfx_actions action = re.get_action();
+	class_sfx_engine_event* re = dynamic_cast<class_sfx_engine_event*>(e); 
+	e_sfx_sounds sound = re->get_sound();
+	e_sfx_actions action = re->get_action();
 	switch (action)
 	{
 	case play:

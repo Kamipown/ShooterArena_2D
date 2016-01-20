@@ -26,7 +26,7 @@ private:
 	void pause_sound(e_sfx_sounds sound);
 
     protected:
-         void process_event(class_engine_event &e);
+         void process_event(class_engine_event* e);
 
 	public:
 		class_sfx_engine(class_game* m_parent);
