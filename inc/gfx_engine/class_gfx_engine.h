@@ -4,22 +4,16 @@ class class_gfx_engine;
 
 #include "class_engine.h"
 #include <stdio.h>
+#include <cstdlib>
 #include <SDL2/SDL.h>
 #include "defs.h"
+#include "class_gfx_window.h"
 
 class class_gfx_engine
     : public class_engine
 {
 	private:
-		SDL_Window	*window;
-		int 		screen_width;
-		int 		screen_height;
-		bool		fullscreen;
-
-		void get_display_bounds(void);
-		void set_window_fullscreen(void);
-		void set_window_desktop(void);
-		void switch_fullscreen_state(void);
+		class_gfx_window	*window;
 
 	protected:
 		void process_event(class_engine_event* e);
