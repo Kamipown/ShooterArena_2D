@@ -15,8 +15,8 @@ class_game_engine::~class_game_engine()
 void class_game_engine::frame(){
 	this->process_events();
     std::cout<<"This is a loop"<<std::endl;
-    class_game_engine_event* e = new class_game_engine_event(0, quit_game);
-    this->push_event(e);
+   // class_game_engine_event* e = new class_game_engine_event(0, quit_game);
+   // this->push_event(e);
 }
 
 void class_game_engine::process_event(class_engine_event* e){
