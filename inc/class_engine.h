@@ -19,9 +19,9 @@ class class_engine
 
          virtual void process_event(class_engine_event* e) = 0;
 
-         void send_to_game(class_engine_event& e);
-         void send_to_gfx(class_engine_event& e);
-         void send_to_sfx(class_engine_event& e);
+         void send_to_game(class_engine_event* e);
+         void send_to_gfx(class_engine_event* e);
+         void send_to_sfx(class_engine_event* e);
 
          class_game_engine* game_engine;
          class_gfx_engine* gfx_engine;

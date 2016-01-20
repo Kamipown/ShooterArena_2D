@@ -23,3 +23,15 @@ void class_engine::process_events(){
         this->q_events.pop();
     }
 }
+
+void class_engine::send_to_game(class_engine* e){
+    game_engine->push_event(e);
+}
+
+void class_engine::send_to_gfx(class_engine* e){
+    gfx_engine->push_event(e);
+}
+
+void class_engine::send_to_sfx(class_engine* e){
+    sfx_engine->push_event(e);
+}
