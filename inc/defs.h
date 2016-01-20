@@ -9,3 +9,6 @@
 #include "class_game.h"
 
 static char *GAME_NAME = strdup("Le nom du jeu");
+
+#define WINDOWED 0
+#define FULLSCREEN 1
