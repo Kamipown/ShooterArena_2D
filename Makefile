@@ -11,12 +11,14 @@ SRC =	src/main.cpp \
 		src/gfx_engine/class_gfx_engine.cpp \
 		src/gfx_engine/class_gfx_window.cpp \
 		src/sfx_engine/class_sfx_engine.cpp \
-		src/sfx_engine/class_sfx_engine_event.cpp
+		src/sfx_engine/class_sfx_engine_event.cpp \
+		src/utilities/class_file_ini.cpp
 
 INC =	-I./inc \
 		-I./inc/game_engine \
 		-I./inc/gfx_engine \
-		-I./inc/sfx_engine
+		-I./inc/sfx_engine \
+		-I./inc/utilities
 
 all: $(NAME)
 

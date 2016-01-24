@@ -94,10 +94,10 @@ std::string			class_file_ini::get_string_value(const std::string &name)
 
 static std::string	int_to_string(int n)
 {
-	std::string	str;
-	bool		neg;
-	char		c;
-	int			i;
+	std::string		str;
+	bool			neg;
+	char			c;
+	unsigned int	i;
 
 	i = 0;
 	if (n == 0)
