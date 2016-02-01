@@ -10,7 +10,7 @@ class class_game;
 
 class class_engine
 {
-    
+
     protected:
 
          class_game* parent;
